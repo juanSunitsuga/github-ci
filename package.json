@@ -8,11 +8,16 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p tsconfig.build.json"
+    "build": "tsc -p tsconfig.build.json",
+    "check-before-push": "npm run build && npm test"
+  },
+  "simple-git-hooks": {
+    "pre-push": "npm run check-before-push"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "jest": "^30.0.5",
+    "simple-git-hooks": "^2.13.0",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
