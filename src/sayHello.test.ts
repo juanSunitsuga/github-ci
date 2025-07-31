@@ -5,3 +5,9 @@ describe('sayHello', () => {
         expect(sayHello('John')).toBe('Hell, John!');
     });
 })
+
+describe('sayHello', () => {
+    it('should return a string with the name', () => {
+        expect(sayHello('John')).toBe('Hello, John!');
+    });
+})
